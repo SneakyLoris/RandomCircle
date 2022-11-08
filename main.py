@@ -31,7 +31,9 @@ class Program(QWidget, Ui_Form):
             qp.end()
 
     def pushbtn(self):
-        pass
+        self.entercode = 1
+        self.x, self.y = randint(10, 500), randint(10, 500)
+        self.repaint()
 
 
 if __name__ == '__main__':
