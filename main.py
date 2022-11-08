@@ -19,7 +19,16 @@ class Program(QWidget, Ui_Form):
         self.pushButton.clicked.connect(self.pushbtn)
 
     def paintEvent(self, event):
-        pass
+        if self.entercode == 1:
+            print('ok')
+            qp = QPainter()
+            qp.begin(self)
+
+            x = randint(5, 250)
+            color = QColor(randint(0, 255), randint(0, 255), randint(0, 255))
+            qp.setBrush(color)
+            qp.drawEllipse(self.x - x // 2, self.y - x // 2, x, x)
+            qp.end()
 
     def pushbtn(self):
         pass
